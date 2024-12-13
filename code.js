@@ -4,12 +4,12 @@ function padNumber(num) {
 }
 
 // 출석코드 입력필드와 출석 버튼
-var pinInput = document.getElementById("pin");
-var attendButton = document.getElementById("attendBtn");
+let pinInput = document.getElementById("pin");
+let attendButton = document.getElementById("attendBtn");
 
 // 001부터 999까지 입력
 for (let i = 1; i <= 999; i++) {
-  var formattedValue = padNumber(i); // 3자리로 포맷팅
+  let formattedValue = padNumber(i); // 3자리로 포맷팅
   //formattedValue=i.padStart(3,'0'); 으로 시도해보기
 
   if (pinInput) {
@@ -24,7 +24,7 @@ for (let i = 1; i <= 999; i++) {
 
   // 엔터 키 이벤트 생성(코드 불 일치 팝업 닫기)
   if (pinInput) {
-    var event = new KeyboardEvent('keydown', { key: 'Enter' }); // 엔터 키 이벤트 생성
+    let event = new KeyboardEvent('keydown', { key: 'Enter' }); // 엔터 키 이벤트 생성
     pinInput.dispatchEvent(event); // 입력 필드에 이벤트 디스패치
     //console.log("팝업을 닫았습니다");
   }
